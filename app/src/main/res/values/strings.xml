@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">422nd Bank</string>
+    <string name="bank_name">422nd Bank</string>
+
+    <!-- CredentialsFragment strings -->
+    <string name="hint_username">username</string>
+    <string name="hint_password">password</string>
+    <string name="recover_password">recover password</string>
+    <string name="login">Login</string>
+    <string name="loginCreateAccount">Don\'t have an account? Press here to get started!</string>
+
+    <!-- TwoFactorFragment strings -->
+    <string name="hint_security_code">security code</string>
+    <string name="resend_security_code">resend security code</string>
+</resources>
