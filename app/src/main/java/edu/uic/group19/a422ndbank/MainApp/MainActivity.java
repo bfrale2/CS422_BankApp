@@ -1,11 +1,14 @@
-package edu.uic.group19.a422ndbank;
+package edu.uic.group19.a422ndbank.MainApp;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import edu.uic.group19.a422ndbank.R;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -43,27 +46,27 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.main_TransHist:
-                Toast.makeText(this, "Clicked Transaction History", Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(this, TransHistoryActivity.class));
 
                 break;
             case R.id.main_Deposit:
-                Toast.makeText(this, "Clicked Deposit", Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(this, DepositActivity.class));
 
                 break;
             case R.id.main_TransMoney:
-                Toast.makeText(this, "Clicked Transaction Money", Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(this, TransMoneyActivity.class));
 
                 break;
             case R.id.main_PayBills:
-                Toast.makeText(this, "Clicked Pay Bills", Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(this, PayBillsActivity.class));
 
                 break;
             case R.id.main_Settings:
-                Toast.makeText(this, "Clicked Settings", Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(this, SettingsActivity.class));
 
                 break;
             case R.id.main_Help:
-                Toast.makeText(this, "Clicked Help", Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(this, HelpActivity.class));
 
                 break;
         }
