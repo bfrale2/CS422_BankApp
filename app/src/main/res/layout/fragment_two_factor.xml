@@ -21,16 +21,6 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:text="@string/bank_name"
-            android:textColor="#133253"
-            android:textSize="48sp"
-            android:textStyle="bold"
-            android:layout_marginBottom="16dp"/>
-
         <EditText
             android:id="@+id/edit_securityCode"
             android:layout_width="match_parent"
