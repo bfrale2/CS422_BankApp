@@ -6,16 +6,15 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
-import android.widget.Toast;
 
+import edu.uic.group19.a422ndbank.MainApp.TransHistory.TransHistoryActivity;
 import edu.uic.group19.a422ndbank.R;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     private String name = "Mr. Vielle";
 
-
-    private TextView helloTextView; // main_HelloText
+    private TextView helloTextView;
 
     private Button transHistoryButton;
     private Button depositButton;

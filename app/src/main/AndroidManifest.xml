@@ -14,7 +14,7 @@
         <activity android:name=".MainApp.PayBillsActivity" />
         <activity android:name=".MainApp.TransMoneyActivity" />
         <activity android:name=".MainApp.DepositActivity" />
-        <activity android:name=".MainApp.TransHistoryActivity" />
+        <activity android:name=".MainApp.TransHistory.TransHistoryActivity" />
         <activity android:name=".MainApp.MainActivity" />
         <activity android:name=".LoginActivity">
             <intent-filter>
