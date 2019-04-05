@@ -5,7 +5,7 @@
     <!-- CredentialsFragment strings -->
     <string name="hint_username">username</string>
     <string name="hint_password">password</string>
-    <string name="recover_password">recover password</string>
+    <string name="recover_password">Recover password</string>
     <string name="login">Login</string>
     <string name="loginCreateAccount">Don\'t have an account? Press here to get started!</string>
 
@@ -30,6 +30,16 @@
 
     <!-- TransHistory strings -->
     <string name="home">Home</string>
+
+    <!-- SecurityTutorialFragment strings -->
+    <string name="security_tutorial_title">Security Tutorial</string>
+    <string name="skip">Skip</string>
+    <string name="back_arrow"><![CDATA[< Back]]></string>
+    <string name="next_arrow"><![CDATA[Next >]]></string>
+    <string name="security_content_1">Welcome to 422nd Bank! Before we begin, we\'d like to remind you that 422nd Bank uses only the strictest security measures to keep you and your money safe. Additionally, we will never share your information with anybody, ever.\n\nIn order for us to best protect you, please take a moment to review the following security tips before creating your account.</string>
+    <string name="security_content_2">Beware of fake phone calls, emails, and letters from impostors.\n\n422nd Bank will NEVER ask you for your password or account information by email, telephone, or any other means except through the official 422nd Bank app.\n\nOnly contact 422nd Bank using the information found within this app.</string>
+    <string name="security_content_3">When choosing a password, make it hard to guess!\n\nAvoid using birthdays, anniversaries, or other important dates in your password.\n\nAlso avoid using the names of relatives, friends, and pets.\n\nA good password contains a mix of uppercase and lowercase letters, numbers, and punctuation.</string>
+    <string name="security_content_4">Finally, stay vigilant by regularly monitoring your transaction history!\n\nThe 422nd Bank app makes monitoring your account easier than ever.\n\nIf you see suspicious transactions on your account, you can report them by tapping on them in \"Transactions\" section of this app.</string>
 
     <!-- TransMoney strings -->
     <string name="toPhoneNum">To (Phone number):</string>
