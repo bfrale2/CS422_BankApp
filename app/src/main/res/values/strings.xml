@@ -44,6 +44,11 @@
     <!-- TransMoney strings -->
     <string name="toPhoneNum">To (Phone number):</string>
     <string name="amount">Amount:</string>
+    <string name="account_registration">Account Registration</string>
+    <string name="register_basic_information">Basic Information</string>
+    <string name="first_name">first name</string>
+    <string name="last_name">last name</string>
+    <string name="hint_password_repeat">password (again)</string>
 
 
 </resources>
