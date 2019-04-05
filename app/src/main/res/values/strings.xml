@@ -50,5 +50,13 @@
     <string name="last_name">last name</string>
     <string name="hint_password_repeat">password (again)</string>
 
+    <!-- About Strings -->
+    <string name="madeBy"> 422nd Bank was created by:\n
+ - Brandon Frale (bfrale2)\n
+ - Alexandru Guler (aguler3)\n
+ - James Warda (jwarda4)\n
+ - Himanshu Dhamija (hdhami2)\n
+ - Jay Patel (jpatell97)
+</string>
 
 </resources>
