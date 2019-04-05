@@ -1,6 +1,5 @@
 package edu.uic.group19.a422ndbank.MainApp.AccountCreation;
 
-import android.net.Uri;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AppCompatActivity;
@@ -35,7 +34,7 @@ public class AccountCreationActivity extends AppCompatActivity implements Securi
 
     //
     @Override
-    public void onFragmentInteraction(Uri uri) {
-
+    public void onAccountCreated() {
+        finish();
     }
 }

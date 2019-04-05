@@ -142,8 +142,10 @@ public class SecurityTutorialFragment extends Fragment {
     private void setContentPage(int page) {
         if(page == 0) {
             btnPrevious.setEnabled(false);
+            btnPrevious.setVisibility(View.INVISIBLE);
         }else if(page < pageStringIds.length) {
             btnPrevious.setEnabled(true);
+            btnPrevious.setVisibility(View.VISIBLE);
         }
         if(page >= 0 && page < pageStringIds.length) {
             currentPage = page;

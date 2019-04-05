@@ -4,6 +4,101 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainApp.HelpActivity">
+    tools:context=".MainApp.HelpPage.HelpActivity">
+
+    <TextView
+        android:id="@+id/faqTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="FAQ's"
+        android:textSize="60dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/lineView"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="12dp"
+        android:background="@color/colorPrimary"
+        app:layout_constraintLeft_toLeftOf="@id/faqTextView"
+        app:layout_constraintLeft_toRightOf="@id/faqTextView"
+        app:layout_constraintTop_toBottomOf="@id/faqTextView" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/faqRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@id/stillNeedHelpLine"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lineView">
+
+    </android.support.v7.widget.RecyclerView>
+
+    <View
+        android:id="@+id/stillNeedHelpLine"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        app:layout_constraintBottom_toTopOf="@id/stillNeedHelp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:background="@color/colorPrimary"
+        android:layout_marginBottom="5dp"
+        />
+
+    <TextView
+        android:id="@+id/stillNeedHelp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:text="Still need help?"
+        android:textAlignment="center"
+        android:textSize="30dp"
+        app:layout_constraintBottom_toTopOf="@id/callUsButton"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <Button
+        android:id="@+id/callUsButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:background="@color/colorPrimary"
+        android:drawableLeft="@drawable/mobile_phone_white"
+        android:drawablePadding="7dp"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+        android:text="Call Us"
+        android:textAllCaps="false"
+        android:textColor="@color/colorButtonText"
+        android:textSize="21sp"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/help_home_button"
+
+        />
+
+    <Button
+        android:id="@+id/help_home_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+        android:drawablePadding="7dp"
+        android:textColor="@color/colorButtonText"
+        android:background="@color/colorButtonBackground"
+        android:drawableLeft="@drawable/home_icon"
+        android:textAllCaps="false"
+        android:text="@string/home"
+        android:textSize="21sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="5dp"
+        />
+
 
 </android.support.constraint.ConstraintLayout>

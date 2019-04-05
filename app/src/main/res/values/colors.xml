@@ -2,13 +2,13 @@
 <resources>
     <color name="colorPrimary">#133253</color>
     <color name="colorPrimaryDark">#2B4B6F</color>
-    <color name="colorAccent">#738CA6</color>
+    <color name="colorAccent">#5C5E60</color>
 
     <color name="colorTitle">#133253</color>
     <color name="colorButtonBackground">#2B4B6F</color>
     <color name="colorButtonText">#FFFFFF</color>
 
-    <color name="transHistoryCellColor">#C6E2ff</color>
+    <color name="transHistoryCellColor">#B8D1EC</color>
 
     <color name="positiveGreen">#00E012</color>
     <color name="negativeRed">#E00000</color>

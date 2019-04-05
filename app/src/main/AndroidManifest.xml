@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainApp.HelpActivity"></activity>
+        <activity android:name=".MainApp.HelpPage.QuestAnswerActivity"></activity>
+        <activity android:name=".MainApp.HelpPage.HelpActivity" />
         <activity android:name=".MainApp.Settings.SettingsActivity" />
         <activity android:name=".MainApp.AccountCreation.AccountCreationActivity"></activity>
         <activity android:name=".MainApp.PayBills.PayBillsActivity" />
