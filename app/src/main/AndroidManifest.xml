@@ -12,8 +12,6 @@
         <activity android:name=".MainApp.HelpActivity"></activity>
         <activity android:name=".MainApp.Settings.SettingsActivity" />
         <activity android:name=".MainApp.AccountCreation.AccountCreationActivity"></activity>
-        <activity android:name=".MainApp.HelpActivity" />
-        <activity android:name=".MainApp.SettingsActivity" />
         <activity android:name=".MainApp.PayBillsActivity" />
         <activity android:name=".MainApp.TransMoneyActivity" />
         <activity android:name=".MainApp.DepositActivity" />
