@@ -10,5 +10,5 @@ import android.widget.Button;
 import edu.uic.group19.a422ndbank.R;
 
 
-public class Depositactivity_upload extends AppCompatActivity {
+public class Depositactivity_upload extends AppCompatActivity  {
 }
