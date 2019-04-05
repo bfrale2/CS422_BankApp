@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import edu.uic.group19.a422ndbank.MainApp.HelpPage.HelpActivity;
 import edu.uic.group19.a422ndbank.MainApp.TransHistory.TransHistoryActivity;
 import edu.uic.group19.a422ndbank.R;
 
