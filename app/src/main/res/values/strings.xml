@@ -35,5 +35,13 @@
     <string name="toPhoneNum">To (Phone number):</string>
     <string name="amount">Amount:</string>
 
+    <!-- About Strings -->
+    <string name="madeBy"> 422nd Bank was created by:\n
+ - Brandon Frale (bfrale2)\n
+ - Alexandru Guler (aguler3)\n
+ - James Warda (jwarda4)\n
+ - Himanshu Dhamija (hdhami2)\n
+ - Jay Patel (jpatell97)
+</string>
 
 </resources>

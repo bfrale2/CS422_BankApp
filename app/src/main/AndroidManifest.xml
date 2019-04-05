@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".MainApp.HelpActivity"></activity>
-        <activity android:name=".MainApp.SettingsActivity" />
+        <activity android:name=".MainApp.Settings.SettingsActivity" />
         <activity android:name=".MainApp.PayBillsActivity" />
         <activity android:name=".MainApp.TransMoneyActivity" />
         <activity android:name=".MainApp.DepositActivity" />
