@@ -44,6 +44,8 @@
     <!-- TransMoney strings -->
     <string name="toPhoneNum">To (Phone number):</string>
     <string name="amount">Amount:</string>
+
+    <!-- AccountRegisterFragment strings -->
     <string name="account_registration">Account Registration</string>
     <string name="register_basic_information">Basic Information</string>
     <string name="first_name">first name</string>
