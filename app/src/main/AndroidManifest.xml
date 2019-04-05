@@ -11,7 +11,8 @@
         android:theme="@style/AppTheme">
         <activity android:name=".MainApp.HelpPage.QuestAnswerActivity"></activity>
         <activity android:name=".MainApp.HelpPage.HelpActivity" />
-        <activity android:name=".MainApp.SettingsActivity" />
+        <activity android:name=".MainApp.Settings.SettingsActivity" />
+        <activity android:name=".MainApp.AccountCreation.AccountCreationActivity"></activity>
         <activity android:name=".MainApp.PayBillsActivity" />
         <activity android:name=".MainApp.TransMoneyActivity" />
         <activity android:name=".MainApp.DepositActivity" />

@@ -1,35 +1,35 @@
-package edu.uic.group19.a422ndbank;
+package edu.uic.group19.a422ndbank.MainApp.AccountCreation;
 
 import android.content.Context;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;
+import android.widget.LinearLayout;
 
+import java.util.ArrayList;
+
+import edu.uic.group19.a422ndbank.R;
 
 /**
  * A simple {@link Fragment} subclass.
  * Activities that contain this fragment must implement the
- * {@link CredentialsFragment.OnFragmentInteractionListener} interface
+ * {@link AccountRegisterFragment.OnFragmentInteractionListener} interface
  * to handle interaction events.
- * Use the {@link CredentialsFragment#newInstance} factory method to
+ * Use the {@link AccountRegisterFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class CredentialsFragment extends Fragment {
+public class AccountRegisterFragment extends Fragment {
 
     private OnFragmentInteractionListener mListener;
 
-    private EditText fieldUsername;
-    private EditText fieldPassword;
-
 
     //
-    public CredentialsFragment() {
+    public AccountRegisterFragment() {
         // Required empty public constructor
     }
 
@@ -38,11 +38,10 @@ public class CredentialsFragment extends Fragment {
      * Use this factory method to create a new instance of
      * this fragment using the provided parameters.
      *
-     * @return A new instance of fragment CredentialsFragment.
+     * @return A new instance of fragment AccountRegisterFragment.
      */
-    // TODO: Rename and change types and number of parameters
-    public static CredentialsFragment newInstance() {
-        CredentialsFragment fragment = new CredentialsFragment();
+    public static AccountRegisterFragment newInstance() {
+        AccountRegisterFragment fragment = new AccountRegisterFragment();
         Bundle args = new Bundle();
         fragment.setArguments(args);
         return fragment;
@@ -61,31 +60,21 @@ public class CredentialsFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        final View rootView = inflater.inflate(R.layout.fragment_credentials, container, false);
+        View rootView = inflater.inflate(R.layout.fragment_account_register, container, false);
 
-        fieldUsername = rootView.findViewById(R.id.edit_username);
-        fieldPassword = rootView.findViewById(R.id.edit_password);
+        Button prevButton = rootView.findViewById(R.id.btn_previous);
+        prevButton.setEnabled(false);
+        prevButton.setVisibility(View.INVISIBLE);
 
-        Button loginButton = rootView.findViewById(R.id.btn_login);
-        loginButton.setOnClickListener(new OnClickListener() {
+        Button nextButton = rootView.findViewById(R.id.btn_next);
+        nextButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String username = fieldUsername.getText().toString();
-                String password = fieldPassword.getText().toString();
-
-                mListener.onCredentialsEntered(username, password);
+                mListener.onAccountCreated();
             }
         });
 
-        TextView linkCreateAccount = rootView.findViewById(R.id.link_createAccount);
-        linkCreateAccount.setOnClickListener(new OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                mListener.onCreateAccount();
-            }
-        });
-
-        return rootView;
+        return inflater.inflate(R.layout.fragment_account_register, container, false);
     }
 
 
@@ -121,7 +110,7 @@ public class CredentialsFragment extends Fragment {
      * >Communicating with Other Fragments</a> for more information.
      */
     public interface OnFragmentInteractionListener {
-        void onCredentialsEntered(String username, String password);
-        void onCreateAccount();
+        // TODO: Update argument type and name
+        void onAccountCreated();
     }
 }
