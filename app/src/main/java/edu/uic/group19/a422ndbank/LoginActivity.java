@@ -8,6 +8,7 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
+import edu.uic.group19.a422ndbank.MainApp.AccountCreation.AccountCreationActivity;
 import edu.uic.group19.a422ndbank.MainApp.MainActivity;
 
 public class LoginActivity extends AppCompatActivity implements CredentialsFragment.OnFragmentInteractionListener, TwoFactorFragment.OnFragmentInteractionListener {
@@ -45,6 +46,12 @@ public class LoginActivity extends AppCompatActivity implements CredentialsFragm
             FragmentManager fm = getSupportFragmentManager();
             fm.beginTransaction().replace(R.id.frame_loginStep, twoFactorFragment).commit();
         }
+    }
+
+    @Override
+    public void onCreateAccount() {
+        Intent intent = new Intent(getApplicationContext(), AccountCreationActivity.class);
+        startActivity(intent);
     }
 
 

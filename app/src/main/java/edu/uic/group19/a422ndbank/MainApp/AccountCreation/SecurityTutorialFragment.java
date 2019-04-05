@@ -1,35 +1,42 @@
-package edu.uic.group19.a422ndbank;
+package edu.uic.group19.a422ndbank.MainApp.AccountCreation;
 
 import android.content.Context;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.TextView;
 
+import edu.uic.group19.a422ndbank.R;
 
 /**
  * A simple {@link Fragment} subclass.
  * Activities that contain this fragment must implement the
- * {@link CredentialsFragment.OnFragmentInteractionListener} interface
+ * {@link SecurityTutorialFragment.OnFragmentInteractionListener} interface
  * to handle interaction events.
- * Use the {@link CredentialsFragment#newInstance} factory method to
+ * Use the {@link SecurityTutorialFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class CredentialsFragment extends Fragment {
+public class SecurityTutorialFragment extends Fragment {
 
     private OnFragmentInteractionListener mListener;
 
-    private EditText fieldUsername;
-    private EditText fieldPassword;
+    private int pageStringIds[] = {R.string.security_content_1, R.string.security_content_2, R.string.security_content_3, R.string.security_content_4};
+    private int currentPage;
+
+    TextView textPageCounter;
+    TextView textContent;
+
+    Button btnPrevious;
+    Button btnNext;
+    Button btnSkip;
 
 
     //
-    public CredentialsFragment() {
+    public SecurityTutorialFragment() {
         // Required empty public constructor
     }
 
@@ -38,11 +45,11 @@ public class CredentialsFragment extends Fragment {
      * Use this factory method to create a new instance of
      * this fragment using the provided parameters.
      *
-     * @return A new instance of fragment CredentialsFragment.
+     * @return A new instance of fragment SecurityTutorialFragment.
      */
     // TODO: Rename and change types and number of parameters
-    public static CredentialsFragment newInstance() {
-        CredentialsFragment fragment = new CredentialsFragment();
+    public static SecurityTutorialFragment newInstance() {
+        SecurityTutorialFragment fragment = new SecurityTutorialFragment();
         Bundle args = new Bundle();
         fragment.setArguments(args);
         return fragment;
@@ -61,27 +68,33 @@ public class CredentialsFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        final View rootView = inflater.inflate(R.layout.fragment_credentials, container, false);
+        View rootView = inflater.inflate(R.layout.fragment_security_tutorial, container, false);
+        btnPrevious = rootView.findViewById(R.id.btn_previous);
+        btnNext = rootView.findViewById(R.id.btn_next);
+        btnSkip = rootView.findViewById(R.id.btn_skipTutorial);
+        textPageCounter = rootView.findViewById(R.id.text_pageCounter);
+        textContent = rootView.findViewById(R.id.text_securityTutorialContent);
 
-        fieldUsername = rootView.findViewById(R.id.edit_username);
-        fieldPassword = rootView.findViewById(R.id.edit_password);
+        setContentPage(0);
 
-        Button loginButton = rootView.findViewById(R.id.btn_login);
-        loginButton.setOnClickListener(new OnClickListener() {
+        btnNext.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String username = fieldUsername.getText().toString();
-                String password = fieldPassword.getText().toString();
-
-                mListener.onCredentialsEntered(username, password);
+                setContentPage(currentPage + 1);
             }
         });
 
-        TextView linkCreateAccount = rootView.findViewById(R.id.link_createAccount);
-        linkCreateAccount.setOnClickListener(new OnClickListener() {
+        btnPrevious.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                mListener.onCreateAccount();
+                setContentPage(currentPage - 1);
+            }
+        });
+
+        btnSkip.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mListener.onTutorialEnded();
             }
         });
 
@@ -121,7 +134,24 @@ public class CredentialsFragment extends Fragment {
      * >Communicating with Other Fragments</a> for more information.
      */
     public interface OnFragmentInteractionListener {
-        void onCredentialsEntered(String username, String password);
-        void onCreateAccount();
+        void onTutorialEnded();
+    }
+
+
+    //
+    private void setContentPage(int page) {
+        if(page == 0) {
+            btnPrevious.setEnabled(false);
+        }else if(page < pageStringIds.length) {
+            btnPrevious.setEnabled(true);
+        }
+        if(page >= 0 && page < pageStringIds.length) {
+            currentPage = page;
+            textContent.setText(pageStringIds[currentPage]);
+            textPageCounter.setText(String.format("(%d/%d)", page + 1, pageStringIds.length));
+        }
+        if(page == pageStringIds.length) {
+            mListener.onTutorialEnded();
+        }
     }
 }
