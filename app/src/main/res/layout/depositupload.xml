@@ -4,7 +4,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    tools:context=".MainApp.Depositactivity_upload">
 
     <TextView
         android:id="@+id/instruction"
@@ -95,9 +96,9 @@
         android:id="@+id/camera"
         android:layout_width="152dp"
         android:layout_height="87dp"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="12dp"
         android:layout_marginEnd="132dp"
-        android:layout_marginBottom="65dp"
+        android:layout_marginBottom="104dp"
         android:background="@color/colorTitle"
         android:text="CAMERA"
         android:textColor="@android:color/white"
@@ -105,15 +106,40 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/instruction_2"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintStart_toEndOf="@+id/imageView"
+        app:layout_constraintTop_toBottomOf="@+id/instruction_2" />
 
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="56dp"
         android:layout_height="82dp"
-        app:srcCompat="@android:drawable/ic_menu_camera"
-        tools:layout_editor_absoluteX="71dp"
-        tools:layout_editor_absoluteY="580dp" />
+        android:layout_marginStart="71dp"
+        android:layout_marginBottom="108dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/camera"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@android:drawable/ic_menu_camera" />
+
+    <Button
+        android:id="@+id/trans_hist_homeButton"
+        android:layout_width="154dp"
+        android:layout_height="78dp"
+        android:layout_marginStart="133dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="133dp"
+        android:layout_marginBottom="16dp"
+        android:background="@color/colorPrimaryDark"
+        android:drawableLeft="@drawable/home_icon"
+        android:drawablePadding="7dp"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+        android:text="@string/home"
+        android:textAllCaps="false"
+        android:textColor="@color/colorButtonText"
+        android:textSize="21sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/camera" />
 
 </android.support.constraint.ConstraintLayout>
