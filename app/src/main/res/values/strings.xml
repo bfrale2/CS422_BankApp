@@ -41,4 +41,9 @@
     <string name="security_content_3">When choosing a password, make it hard to guess!\n\nAvoid using birthdays, anniversaries, or other important dates in your password.\n\nAlso avoid using the names of relatives, friends, and pets.\n\nA good password contains a mix of uppercase and lowercase letters, numbers, and punctuation.</string>
     <string name="security_content_4">Finally, stay vigilant by regularly monitoring your transaction history!\n\nThe 422nd Bank app makes monitoring your account easier than ever.\n\nIf you see suspicious transactions on your account, you can report them by tapping on them in \"Transactions\" section of this app.</string>
 
+    <!-- TransMoney strings -->
+    <string name="toPhoneNum">To (Phone number):</string>
+    <string name="amount">Amount:</string>
+
+
 </resources>
