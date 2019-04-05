@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/about_background"
+    android:paddingTop="10dp"
+    android:layout_marginTop="5dp"
+    android:paddingBottom="10dp"
+    android:layout_marginLeft="10dp"
+    android:layout_marginStart="10dp"
+    android:layout_marginRight="10dp"
+    android:layout_marginEnd="10dp">
+
+    <TextView
+        android:id="@+id/cell_pay_bill_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Comcast"
+        android:textStyle="bold"
+        android:textSize="21sp"
+        android:textColor="@color/colorButtonBackground"
+        android:layout_marginLeft="10dp"
+        android:layout_marginStart="10dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/cell_pay_bill_amountDueText"
+        app:layout_constraintTop_toTopOf="@+id/cell_pay_bill_amountDueText"
+        app:layout_constraintBottom_toBottomOf="@+id/cell_pay_bill_amountDueText"
+        app:layout_constraintHorizontal_bias="0.0"
+        />
+
+    <TextView
+        android:id="@+id/cell_pay_bill_amountDueText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Due: $100"
+        android:textSize="21sp"
+        android:textColor="@color/colorButtonBackground"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/cell_pay_bill_dollarSign"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="$"
+        android:textStyle="bold"
+        android:textSize="21sp"
+        android:textColor="@color/colorButtonBackground"
+        app:layout_constraintRight_toLeftOf="@+id/cell_pay_bill_editText"
+        app:layout_constraintTop_toTopOf="@+id/cell_pay_bill_editText"
+        app:layout_constraintBottom_toBottomOf="@+id/cell_pay_bill_editText"
+        android:layout_marginRight="7dp"
+        android:layout_marginEnd="7dp"
+        />
+
+    <EditText
+        android:id="@+id/cell_pay_bill_editText"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:background="@color/colorButtonText"
+        android:textSize="23sp"
+        android:inputType="numberDecimal"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/cell_pay_bill_amountDueText"
+        android:layout_marginRight="10dp"
+        android:layout_marginEnd="10dp"
+        app:layout_constraintHorizontal_bias="1.0"
+        />
+
+</android.support.constraint.ConstraintLayout>

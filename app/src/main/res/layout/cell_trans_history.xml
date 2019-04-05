@@ -6,7 +6,7 @@
     android:layout_marginTop="5dp"
     android:paddingTop="10dp"
     android:paddingBottom="10dp"
-    android:background="@color/transHistoryCellColor"
+    android:background="@drawable/about_background"
     android:layout_marginLeft="10dp"
     android:layout_marginStart="10dp"
     android:layout_marginRight="10dp"
