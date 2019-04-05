@@ -1,10 +1,13 @@
 package edu.uic.group19.a422ndbank.MainApp.HelpPage;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.view.View;
+import android.widget.Button;
 import android.widget.Toast;
 
 import java.util.ArrayList;
@@ -16,6 +19,8 @@ public class HelpActivity extends AppCompatActivity implements HelpPageAdapter.O
 
     RecyclerView recyclerView;
     ArrayList<FAQ> questions;
+    Button contactUsButton;
+    Button homeButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,6 +33,25 @@ public class HelpActivity extends AppCompatActivity implements HelpPageAdapter.O
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         recyclerView.setAdapter(new HelpPageAdapter(this, questions, this));
 
+        contactUsButton = (Button) findViewById(R.id.callUsButton);
+        homeButton = (Button) findViewById(R.id.help_home_button);
+
+        homeButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
+
+        contactUsButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //For the dial pad
+                Intent i = new Intent(Intent.ACTION_DIAL, null);
+                i.setData(Uri.parse("tel:17738172267"));
+                startActivity(i);
+            }
+        });
     }
 
     private void loadQuestions(){
