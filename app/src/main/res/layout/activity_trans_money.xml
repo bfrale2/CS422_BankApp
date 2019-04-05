@@ -1,9 +1,130 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainApp.TransMoneyActivity">
+
+    <TextView
+        android:id="@+id/trans_money_Title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/transfer_money"
+        android:textColor="@color/colorTitle"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="15dp"
+        />
+
+    <TextView
+        android:id="@+id/trans_money_checkingText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/checkingNumber"
+        android:textColor="@color/colorTitle"
+        android:textSize="24sp"
+        app:layout_constraintTop_toBottomOf="@+id/trans_money_Title"
+        app:layout_constraintLeft_toLeftOf="@+id/trans_money_Title"
+        app:layout_constraintRight_toRightOf="@+id/trans_money_Title"
+        />
+
+    <TextView
+        android:id="@+id/trans_money_toPhoneNum_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/toPhoneNum"
+        android:textColor="@color/colorTitle"
+        android:textSize="19sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="@+id/trans_money_toPhoneNumEditText"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintVertical_bias="0.1"
+        app:layout_constraintTop_toBottomOf="@+id/trans_money_checkingText" />
+
+    <EditText
+        android:id="@+id/trans_money_toPhoneNumEditText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/trans_money_toPhoneNum_text"
+        app:layout_constraintWidth_percent="0.8"
+        android:textSize="19sp"
+        android:inputType="phone"
+        />
+
+    <TextView
+        android:id="@+id/trans_money_amount_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/amount"
+        android:textColor="@color/colorTitle"
+        android:textSize="19sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="@+id/trans_money_toPhoneNumEditText"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintVertical_bias="0.1"
+        app:layout_constraintTop_toBottomOf="@+id/trans_money_toPhoneNumEditText" />
+
+    <EditText
+        android:id="@+id/trans_money_amountEditText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/trans_money_amount_text"
+        app:layout_constraintWidth_percent="0.8"
+        android:inputType="numberDecimal"
+        android:textSize="19sp"
+        />
+
+    <Button
+        android:id="@+id/trans_money_cancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/colorButtonBackground"
+        android:paddingStart="12dp"
+        android:paddingLeft="12dp"
+        android:paddingEnd="12dp"
+        android:paddingRight="12dp"
+        android:text="Cancel"
+        android:textAllCaps="false"
+        android:textColor="@color/colorButtonText"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/trans_money_amountEditText"
+        app:layout_constraintVertical_bias="0.7"
+        app:layout_constraintHorizontal_bias="0.1"
+        />
+
+    <Button
+        android:id="@+id/trans_money_submit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorButtonText"
+        android:background="@color/colorButtonBackground"
+        android:textSize="24sp"
+        android:paddingLeft="12dp"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        android:paddingRight="12dp"
+        android:textAllCaps="false"
+        android:text="Submit"
+        app:layout_constraintLeft_toRightOf="@+id/trans_money_cancel"
+        app:layout_constraintTop_toTopOf="@+id/trans_money_cancel"
+        app:layout_constraintBottom_toBottomOf="@+id/trans_money_cancel"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintHorizontal_bias="0.8"
+        />
+
 
 </android.support.constraint.ConstraintLayout>

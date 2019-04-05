@@ -31,7 +31,9 @@
     <!-- TransHistory strings -->
     <string name="home">Home</string>
 
-
+    <!-- TransMoney strings -->
+    <string name="toPhoneNum">To (Phone number):</string>
+    <string name="amount">Amount:</string>
 
 
 </resources>
