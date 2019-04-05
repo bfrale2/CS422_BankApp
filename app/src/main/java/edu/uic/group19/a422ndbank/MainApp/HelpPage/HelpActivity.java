@@ -56,9 +56,9 @@ public class HelpActivity extends AppCompatActivity implements HelpPageAdapter.O
 
     private void loadQuestions(){
         questions = new ArrayList<>();
-        questions.add(new FAQ("Why did i get this app", "You got this app because it is the best banking app you will ever use and everyone in the world uses it"));
-        questions.add(new FAQ("What do i do with this app", "You can see your accounts, recent transactions, pay some bills and more!!"));
-        questions.add(new FAQ("How do i know you guys wont steal all of my info?", "You just need to trust us.  But the fact is we wouldnt want to steal your info becaues if word got out that we stole info we would be out of business"));
+        questions.add(new FAQ("Why did I get this app?", "You got this app because it is the best banking app you will ever use and everyone in the world uses it"));
+        questions.add(new FAQ("What do I do with this app?", "You can see your accounts, recent transactions, pay some bills and more!!"));
+        questions.add(new FAQ("How do I know you guys wont steal all of my info?", "You just need to trust us.  But the fact is we wouldnt want to steal your info becaues if word got out that we stole info we would be out of business"));
         questions.add(new FAQ("Who made this AMAZING BEAUTIFUL APP???", "Some of the greatest minds at the school of Engineering called University of Illinois!!"));
     }
 
