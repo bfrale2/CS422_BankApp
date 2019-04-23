@@ -48,15 +48,6 @@ public class PayBillsActivity extends AppCompatActivity implements View.OnClickL
         recyclerView.setAdapter(adapter);
     }
 
-    private ArrayList<Bill> getBills() {
-        ArrayList<Bill> bills = new ArrayList<>();
-        bills.add(new Bill("Comcast", 80));
-        bills.add(new Bill("AT&T", 20));
-        bills.add(new Bill("Cricket", 10));
-        bills.add(new Bill("Xsport", 35));
-        return bills;
-    }
-
     private void configureAmountDue() {
         int sum = 0;
         for (Bill bill : bills) {
