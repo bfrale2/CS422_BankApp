@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import edu.uic.group19.a422ndbank.MainApp.HelpPage.HelpActivity;
 import edu.uic.group19.a422ndbank.R;
 
 public class DepositActivity extends AppCompatActivity implements View.OnClickListener {
@@ -41,6 +42,10 @@ public class DepositActivity extends AppCompatActivity implements View.OnClickLi
                 case R.id.trans_hist_homeButton:
                     finish();
                     break;
+
+                case R.id.help_deposit:
+                    goToHelpPage();
+                    break;
             }
         }
 
@@ -48,6 +53,11 @@ public class DepositActivity extends AppCompatActivity implements View.OnClickLi
     {
         dailogclass exampleDialog = new dailogclass();
         exampleDialog.show(getSupportFragmentManager(), "Information");
+    }
+
+    private void goToHelpPage(){
+        Intent i = new Intent(DepositActivity.this, HelpActivity.class);
+        startActivity(i);
     }
 
     private void initializeAllViews() {
