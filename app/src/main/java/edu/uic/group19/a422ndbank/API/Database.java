@@ -66,6 +66,9 @@ public class Database {
         amountOfMoney = amountOfMoney - amount;
     }
 
+    public void transferMoney(int amount) {
+
+    }
 
     public ArrayList<TransHistory> getTransHistories() {
         return transactions;
