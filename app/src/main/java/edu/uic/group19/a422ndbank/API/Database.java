@@ -67,7 +67,9 @@ public class Database {
     }
 
     public void transferMoney(int amount) {
-
+        TransHistory transHistory = new TransHistory(TransHistory.TransHistoryType.BalanceTransfer, -amount, getTimeStamp());
+        transactions.add(transHistory);
+        amountOfMoney = amountOfMoney - amount;
     }
 
     public ArrayList<TransHistory> getTransHistories() {
