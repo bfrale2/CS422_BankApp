@@ -43,6 +43,11 @@ public class PayBillsAdapter extends RecyclerView.Adapter<PayBillsAdapter.PayBil
         return bills.size();
     }
 
+    public void reloadWith(ArrayList<Bill> bills) {
+        this.bills = bills;
+        notifyDataSetChanged();
+    }
+
     public static class PayBillHolder extends RecyclerView.ViewHolder {
 
         private TextView billName, amountDueTextView;
@@ -55,10 +60,23 @@ public class PayBillsAdapter extends RecyclerView.Adapter<PayBillsAdapter.PayBil
             editText = itemView.findViewById(R.id.cell_pay_bill_editText);
         }
 
+        public TextView getBillName() {
+            return billName;
+        }
+
+        public TextView getAmountDueTextView() {
+            return amountDueTextView;
+        }
+
+        public EditText getEditText() {
+            return editText;
+        }
+
         public void bind(Bill bill) {
             billName.setText(bill.getName());
             String amountDue = "Due: $" + bill.getAmountDue();
             amountDueTextView.setText(amountDue);
+            editText.setText("");
         }
     }
 }

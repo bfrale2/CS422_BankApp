@@ -26,8 +26,12 @@ public class TransHistoryActivity extends AppCompatActivity implements View.OnCl
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_trans_history);
         initializeAllViews();
-
         homeButton.setOnClickListener(this);
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
         configureRecyclerView();
     }
 

@@ -17,4 +17,8 @@ public class Bill {
     public int getAmountDue() {
         return amountDue;
     }
+
+    public void setAmountDue(int amountDue) {
+        this.amountDue = amountDue;
+    }
 }
