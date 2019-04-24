@@ -33,7 +33,7 @@ public class Global extends Application {
     }
 
     private ProfileInfo getProfileInfo() {
-        return new ProfileInfo("Fred", "Vielle", "email@email.com");
+        return new ProfileInfo("Fred", "Vielle", "email@email.com", "underTheBed1");
     }
 
     private ArrayList<TransHistory> getTransactionHistory() {
