@@ -3,6 +3,7 @@
     package="edu.uic.group19.a422ndbank">
 
     <application
+        android:name=".MainApp.Global"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -15,7 +16,8 @@
         <activity android:name=".MainApp.AccountCreation.AccountCreationActivity"></activity>
         <activity android:name=".MainApp.PayBills.PayBillsActivity" />
         <activity android:name=".MainApp.TransMoneyActivity" />
-        <activity android:name=".MainApp.DepositActivity" />
+        <activity android:name=".MainApp.DepositeActivity.DepositActivity" />
+        <activity android:name=".MainApp.DepositeActivity.Depositactivity_upload" />
         <activity android:name=".MainApp.TransHistory.TransHistoryActivity" />
         <activity android:name=".MainApp.MainActivity" />
         <activity android:name=".LoginActivity">

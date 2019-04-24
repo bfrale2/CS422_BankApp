@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import edu.uic.group19.a422ndbank.MainApp.DepositeActivity.DepositActivity;
 import edu.uic.group19.a422ndbank.MainApp.PayBills.PayBillsActivity;
 import edu.uic.group19.a422ndbank.MainApp.HelpPage.HelpActivity;
 import edu.uic.group19.a422ndbank.MainApp.Settings.SettingsActivity;

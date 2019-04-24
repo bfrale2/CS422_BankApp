@@ -5,141 +5,59 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainApp.Depositactivity_upload">
+    tools:context=".MainApp.DepositeActivity.Depositactivity_upload">
+
 
     <TextView
-        android:id="@+id/instruction"
-        android:layout_width="wrap_content"
-        android:layout_height="44dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginBottom="24dp"
-        android:background="@android:color/background_dark"
-        android:text="Please follow the instructions below for the text deposit."
-        android:textColor="@android:color/white"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/instruction_2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/heading2" />
-
-    <TextView
-        android:id="@+id/instruction_2"
-        android:layout_width="406dp"
-        android:layout_height="302dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="20dp"
-        android:layout_marginBottom="202dp"
-        android:background="@color/colorButtonText"
-        android:scrollbars="vertical"
-        android:text="TextView"
-        android:textColor="@color/colorAccent"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        android:visibility="visible"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/instruction"
-        tools:text="In order to deposit the cheque online, please take the picture of the cheque front and back. \n\nOnce you hit the Camera icon below, the app will ask you to take a picture of the front side of the cheque. \n\nHit Ok once you have taken the picture successfully.\n\nIt will lead you to the second screen where you will need to take the picture of the back side of the cheque. \n\nOnce done hit the upload button and it will upload the pictures taken. You will see the change in your account balance in 2-3 business days" />
-
-    <TextView
-        android:id="@+id/heading"
-        android:layout_width="145dp"
-        android:layout_height="37dp"
-        android:layout_marginStart="134dp"
-        android:layout_marginEnd="132dp"
-        android:layout_marginBottom="11dp"
-        android:text="422nd BANK"
-        android:textColor="@color/colorPrimary"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/heading2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        android:id="@+id/deposite_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="422nd Bank"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.083" />
-
-    <TextView
-        android:id="@+id/heading2"
-        android:layout_width="216dp"
-        android:layout_height="34dp"
-        android:layout_marginStart="110dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="85dp"
-        android:layout_marginBottom="10dp"
-        android:text="CHEQUE DEPOSIT"
+        android:textSize="30dp"
+        android:textAlignment="center"
         android:textColor="@color/colorPrimary"
-        android:textSize="24sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/instruction"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/divider" />
+        />
 
     <View
-        android:id="@+id/divider"
-        android:layout_width="395dp"
+        android:id="@+id/depositeLineView"
+        android:layout_width="match_parent"
         android:layout_height="1dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="10dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/deposite_title"
+        android:layout_marginTop="15dp"
         android:background="@color/colorPrimary"
-        app:layout_constraintBottom_toTopOf="@+id/heading2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/heading"
-        app:layout_constraintVertical_chainStyle="spread_inside" />
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        ></View>
 
-    <Button
-        android:id="@+id/camera"
-        android:layout_width="152dp"
-        android:layout_height="87dp"
-        android:layout_marginTop="12dp"
-        android:layout_marginEnd="132dp"
-        android:layout_marginBottom="104dp"
-        android:background="@color/colorTitle"
-        android:text="CAMERA"
-        android:textColor="@android:color/white"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/imageView"
-        app:layout_constraintTop_toBottomOf="@+id/instruction_2" />
+    <TextView
+        android:id="@+id/enterAmountLbl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="104dp"
+        android:text="Enter Check Amount"
+        android:textSize="20dp"
+        app:layout_constraintTop_toBottomOf="@id/depositeLineView"
+        tools:layout_editor_absoluteX="16dp" />
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="56dp"
-        android:layout_height="82dp"
-        android:layout_marginStart="71dp"
-        android:layout_marginBottom="108dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/camera"
-        app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@android:drawable/ic_menu_camera" />
+    <EditText
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="24dp"
 
-    <Button
-        android:id="@+id/trans_hist_homeButton"
-        android:layout_width="154dp"
-        android:layout_height="78dp"
-        android:layout_marginStart="133dp"
-        android:layout_marginTop="12dp"
-        android:layout_marginEnd="133dp"
-        android:layout_marginBottom="16dp"
-        android:background="@color/colorPrimaryDark"
-        android:drawableLeft="@drawable/home_icon"
-        android:drawablePadding="7dp"
-        android:paddingLeft="12dp"
-        android:paddingRight="12dp"
-        android:text="@string/home"
-        android:textAllCaps="false"
-        android:textColor="@color/colorButtonText"
-        android:textSize="21sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/camera" />
+        android:hint="$1,000"
+        app:layout_constraintBottom_toBottomOf="@id/enterAmountLbl"
+        app:layout_constraintLeft_toRightOf="@id/enterAmountLbl"
+
+        app:layout_constraintTop_toTopOf="@id/enterAmountLbl"
+        app:layout_constraintVertical_bias="0.521" />
+
+
+
 
 </android.support.constraint.ConstraintLayout>

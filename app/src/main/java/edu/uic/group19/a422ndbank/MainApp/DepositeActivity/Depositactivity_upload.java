@@ -1,4 +1,4 @@
-package edu.uic.group19.a422ndbank.MainApp;
+package edu.uic.group19.a422ndbank.MainApp.DepositeActivity;
 
 
 
