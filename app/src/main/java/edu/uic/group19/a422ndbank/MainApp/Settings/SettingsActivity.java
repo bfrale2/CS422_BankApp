@@ -48,7 +48,8 @@ public class SettingsActivity extends AppCompatActivity implements View.OnClickL
     }
 
     private void updateInfo() {
-        Toast.makeText(this, "Version 2.0!", Toast.LENGTH_SHORT).show();
+        Intent intent = new Intent(getApplicationContext(), UpdateInfoActivity.class);
+        startActivity(intent);
     }
 
     private void about() {
