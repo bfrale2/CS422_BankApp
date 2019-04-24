@@ -10,6 +10,8 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
+import edu.uic.group19.a422ndbank.API.Database;
+import edu.uic.group19.a422ndbank.MainApp.Global;
 import edu.uic.group19.a422ndbank.Models.TransHistory;
 import edu.uic.group19.a422ndbank.R;
 
@@ -32,7 +34,8 @@ public class TransHistoryActivity extends AppCompatActivity implements View.OnCl
     private void configureRecyclerView() {
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(layoutManager);
-        TransHistoryAdapter adapter = new TransHistoryAdapter(getTransactionHistory());
+        Database database = ((Global) getApplication()).getDatabase();
+        TransHistoryAdapter adapter = new TransHistoryAdapter(database.getTransHistories());
         recyclerView.setAdapter(adapter);
     }
 

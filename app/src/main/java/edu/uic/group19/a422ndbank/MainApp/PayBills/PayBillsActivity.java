@@ -10,6 +10,8 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
+import edu.uic.group19.a422ndbank.API.Database;
+import edu.uic.group19.a422ndbank.MainApp.Global;
 import edu.uic.group19.a422ndbank.Models.Bill;
 import edu.uic.group19.a422ndbank.R;
 
@@ -27,7 +29,8 @@ public class PayBillsActivity extends AppCompatActivity implements View.OnClickL
         setContentView(R.layout.activity_pay_bills);
         initializeAllViews();
         submitButton.setOnClickListener(this);
-        bills = getBills();
+        Database database = ((Global) getApplication()).getDatabase();
+        bills = database.getBills();
         configureRecyclerView();
         configureAmountDue();
     }
@@ -56,7 +59,6 @@ public class PayBillsActivity extends AppCompatActivity implements View.OnClickL
         String amountDue = "$" + sum;
         amountDueTextView.setText(amountDue);
     }
-
 
     private void doSubmit() {
         finish();

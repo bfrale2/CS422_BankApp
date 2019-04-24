@@ -24,6 +24,14 @@ public class Global extends Application {
         );
     }
 
+    /**
+     * How to use this
+     * Database database = ((Global) getApplication()).getDatabase();
+     */
+    public Database getDatabase() {
+        return database;
+    }
+
     private ProfileInfo getProfileInfo() {
         return new ProfileInfo("Fred", "Vielle", "email@email.com");
     }
@@ -46,9 +54,5 @@ public class Global extends Application {
         bills.add(new Bill("Cricket", 10));
         bills.add(new Bill("Xsport", 35));
         return bills;
-    }
-
-    public Database getDatabase() {
-        return database;
     }
 }

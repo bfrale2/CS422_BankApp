@@ -21,11 +21,9 @@ public class Database {
     }
 
 
-
     public void payBill(Bill bill) {
 
     }
-
 
 
     public void addTransaction(TransHistory transaction) {
@@ -33,17 +31,14 @@ public class Database {
     }
 
 
-
     public ArrayList<TransHistory> getTransHistories() {
         return transactions;
     }
 
 
-
     public ArrayList<Bill> getBills() {
         return bills;
     }
-
 
 
     public int getAmountOfMoney() {
