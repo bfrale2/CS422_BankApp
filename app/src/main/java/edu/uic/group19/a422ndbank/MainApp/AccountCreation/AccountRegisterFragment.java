@@ -13,6 +13,8 @@ import android.widget.LinearLayout;
 
 import java.util.ArrayList;
 
+import edu.uic.group19.a422ndbank.API.Database;
+import edu.uic.group19.a422ndbank.MainApp.Global;
 import edu.uic.group19.a422ndbank.R;
 
 /**
@@ -26,6 +28,12 @@ import edu.uic.group19.a422ndbank.R;
 public class AccountRegisterFragment extends Fragment {
 
     private OnFragmentInteractionListener mListener;
+
+    private EditText registerFirstName;
+    private EditText registerLastName;
+    private EditText registerEmail;
+    private EditText registerPassword1;
+    private EditText registerPassword2;
 
 
     //
@@ -62,15 +70,17 @@ public class AccountRegisterFragment extends Fragment {
         // Inflate the layout for this fragment
         View rootView = inflater.inflate(R.layout.fragment_account_register, container, false);
 
-        Button prevButton = rootView.findViewById(R.id.btn_previous);
-        prevButton.setEnabled(false);
-        prevButton.setVisibility(View.INVISIBLE);
+        registerFirstName = rootView.findViewById(R.id.field_firstName);
+        registerLastName = rootView.findViewById(R.id.field_lastName);
+        registerEmail = rootView.findViewById(R.id.field_registerUsername);
+        registerPassword1 = rootView.findViewById(R.id.field_registerPassword);
+        registerPassword2 = rootView.findViewById(R.id.field_registerPasswordRepeat);
 
-        Button nextButton = rootView.findViewById(R.id.btn_next);
-        nextButton.setOnClickListener(new View.OnClickListener() {
+        Button registerButton = rootView.findViewById(R.id.btn_registerAccount);
+        registerButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                mListener.onAccountCreated();
+                mListener.onAccountCreated(registerFirstName.getText().toString(), registerLastName.getText().toString(), registerEmail.getText().toString(), registerPassword1.getText().toString(), registerPassword2.getText().toString());
             }
         });
 
@@ -110,7 +120,7 @@ public class AccountRegisterFragment extends Fragment {
      * >Communicating with Other Fragments</a> for more information.
      */
     public interface OnFragmentInteractionListener {
-        // TODO: Update argument type and name
-        void onAccountCreated();
+
+        void onAccountCreated(String firstName, String lastName, String email, String password1, String password2);
     }
 }

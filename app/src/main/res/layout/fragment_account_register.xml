@@ -100,8 +100,8 @@
             android:layout_marginBottom="16dp">
 
             <Button
-                android:id="@+id/btn_previous"
-                android:layout_width="wrap_content"
+                android:id="@+id/btn_registerAccount"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textColor="@color/colorButtonText"
                 android:background="@color/colorButtonBackground"
@@ -109,24 +109,7 @@
                 android:paddingRight="8dp"
                 android:textSize="24sp"
                 android:textStyle="bold"
-                android:text="@string/back_arrow"/>
-
-            <android.support.v4.widget.Space
-                android:layout_height="0dp"
-                android:layout_width="0dp"
-                android:layout_weight="1"/>
-
-            <Button
-                android:id="@+id/btn_next"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textColor="@color/colorButtonText"
-                android:background="@color/colorButtonBackground"
-                android:paddingLeft="8dp"
-                android:paddingRight="8dp"
-                android:textSize="24sp"
-                android:textStyle="bold"
-                android:text="@string/next_arrow"/>
+                android:text="REGISTER"/>
 
         </LinearLayout>
 

@@ -25,6 +25,12 @@ public class Database {
         this.profileInfo = profileInfo;
     }
 
+    public void reset() {
+        transactions = new ArrayList<>();
+        bills = new ArrayList<>();
+        amountOfMoney = 0;
+    }
+
     private Pair<Integer, Bill> getBillByName(String name) {
         for (int i = 0; i < bills.size(); ++i) {
             if (name.equals(bills.get(i).getName())) {
