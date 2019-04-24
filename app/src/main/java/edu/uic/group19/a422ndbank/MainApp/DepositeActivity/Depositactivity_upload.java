@@ -1,10 +1,9 @@
 package edu.uic.group19.a422ndbank.MainApp.DepositeActivity;
 
 
-
 import android.app.Activity;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
@@ -13,11 +12,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import java.text.SimpleDateFormat;
-import java.util.Calendar;
-import java.util.Date;
 import edu.uic.group19.a422ndbank.MainApp.Global;
-import edu.uic.group19.a422ndbank.Models.TransHistory;
 import edu.uic.group19.a422ndbank.R;
 
 public class Depositactivity_upload extends AppCompatActivity {
@@ -79,16 +74,8 @@ public class Depositactivity_upload extends AppCompatActivity {
             return;
         }
 
-        Date c = Calendar.getInstance().getTime();
-
-        SimpleDateFormat df = new SimpleDateFormat("dd/MMM/yyyy");
-        String formattedDate = df.format(c);
-
-
         int amount = Integer.valueOf(amountLbl.getText().toString());
-
-        TransHistory transHistory = new TransHistory(TransHistory.TransHistoryType.Deposit, amount, formattedDate);
-        ((Global) getApplication()).getDatabase().addTransaction(transHistory);
+        ((Global) getApplication()).getDatabase().deposit(amount);
         Toast.makeText(this, "Check Deposited", Toast.LENGTH_SHORT).show();
         finish();
     }

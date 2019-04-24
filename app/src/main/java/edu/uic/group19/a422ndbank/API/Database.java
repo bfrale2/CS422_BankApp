@@ -44,23 +44,26 @@ public class Database {
 
         if (amount >= bill.second.getAmountDue()) {
             bills.remove(bill.first.intValue());
-        }
-        else {
+        } else {
             int amountStillDue = bill.second.getAmountDue() - amount;
             bill.second.setAmountDue(amountStillDue);
         }
 
-        Date c = Calendar.getInstance().getTime();
-        SimpleDateFormat df = new SimpleDateFormat("dd/MMM/yyyy");
-        String formattedDate = df.format(c);
-
-        TransHistory transHistory = new TransHistory(TransHistory.TransHistoryType.Mobile, -amount, formattedDate);
+        TransHistory transHistory = new TransHistory(TransHistory.TransHistoryType.Mobile, -amount, getTimeStamp());
         transactions.add(transHistory);
         amountOfMoney = amountOfMoney - amount;
     }
 
-    public void addTransaction(TransHistory transaction) {
-        transactions.add(transaction);
+    private String getTimeStamp() {
+        Date c = Calendar.getInstance().getTime();
+        SimpleDateFormat df = new SimpleDateFormat("dd/MMM/yyyy");
+        return df.format(c);
+    }
+
+    public void deposit(int amount) {
+        TransHistory transHistory = new TransHistory(TransHistory.TransHistoryType.Deposit, -amount, getTimeStamp());
+        transactions.add(transHistory);
+        amountOfMoney = amountOfMoney - amount;
     }
 
 
