@@ -7,8 +7,11 @@ import android.support.v4.app.FragmentManager;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.widget.Toast;
 
+import edu.uic.group19.a422ndbank.API.Database;
 import edu.uic.group19.a422ndbank.MainApp.AccountCreation.AccountCreationActivity;
+import edu.uic.group19.a422ndbank.MainApp.Global;
 import edu.uic.group19.a422ndbank.MainApp.MainActivity;
 
 public class LoginActivity extends AppCompatActivity implements CredentialsFragment.OnFragmentInteractionListener, TwoFactorFragment.OnFragmentInteractionListener {
@@ -16,6 +19,8 @@ public class LoginActivity extends AppCompatActivity implements CredentialsFragm
     LoginProgressFragment loginProgressFragment;
     CredentialsFragment credentialsFragment;
     TwoFactorFragment twoFactorFragment;
+
+    Database database;
 
 
     //
@@ -38,13 +43,27 @@ public class LoginActivity extends AppCompatActivity implements CredentialsFragm
 
     //
     @Override
+    protected void onStart() {
+        super.onStart();
+
+        database = ((Global) getApplication()).getDatabase();
+    }
+
+
+    //
+    @Override
     public void onCredentialsEntered(String username, String password) {
-        if(!username.isEmpty() && !password.isEmpty()) {
+        String storedEmail = database.getProfileInfo().email;
+        String storedPassword = database.getProfileInfo().password;
+
+        if(storedEmail.equals(username) && storedPassword.equals(password)) {
 
             loginProgressFragment.setProgressCheck(LoginProgressFragment.STEP_CREDNETIALS, true);
 
             FragmentManager fm = getSupportFragmentManager();
             fm.beginTransaction().replace(R.id.frame_loginStep, twoFactorFragment).commit();
+        } else {
+            Toast.makeText(this, "Incorrect login credentials.", Toast.LENGTH_SHORT).show();
         }
     }
 

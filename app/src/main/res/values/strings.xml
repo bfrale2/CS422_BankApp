@@ -3,7 +3,7 @@
     <string name="bank_name">422nd Bank</string>
 
     <!-- CredentialsFragment strings -->
-    <string name="hint_username">username</string>
+    <string name="hint_username">email</string>
     <string name="hint_password">password</string>
     <string name="recover_password">Recover password</string>
     <string name="login">Login</string>
