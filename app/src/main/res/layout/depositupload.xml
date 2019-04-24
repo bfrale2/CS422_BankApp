@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.constraint.ConstraintLayout
+    android:id="@+id/parent"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -39,25 +40,69 @@
         android:id="@+id/enterAmountLbl"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
         android:layout_marginTop="104dp"
         android:text="Enter Check Amount"
         android:textSize="20dp"
-        app:layout_constraintTop_toBottomOf="@id/depositeLineView"
-        tools:layout_editor_absoluteX="16dp" />
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/depositeLineView" />
 
     <EditText
+        android:id="@+id/enterAmount"
         android:layout_width="100dp"
         android:layout_height="50dp"
         android:layout_marginLeft="24dp"
-
         android:hint="$1,000"
         app:layout_constraintBottom_toBottomOf="@id/enterAmountLbl"
         app:layout_constraintLeft_toRightOf="@id/enterAmountLbl"
-
         app:layout_constraintTop_toTopOf="@id/enterAmountLbl"
         app:layout_constraintVertical_bias="0.521" />
 
 
+    <TextView
+        android:id="@+id/enterCheckNumberLbl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:text="Enter Check number"
+        android:textSize="20dp"
+        app:layout_constraintLeft_toLeftOf="@id/enterAmountLbl"
+        app:layout_constraintTop_toBottomOf="@id/enterAmountLbl"></TextView>
+    
+    <EditText
+        android:id="@+id/enterCheckNumber"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:hint="325-123" 
+        app:layout_constraintLeft_toLeftOf="@id/enterAmount"
+        app:layout_constraintTop_toTopOf="@id/enterCheckNumberLbl"
+        app:layout_constraintBottom_toBottomOf="@id/enterCheckNumberLbl"
+        />
+
+    <Button
+        android:id="@+id/depositSubmitButton"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="240dp"
+        android:background="@color/colorPrimary"
+        android:text="submit"
+        android:textColor="@android:color/white"
+        android:textSize="20dp"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/enterCheckNumberLbl" />
+
+    <TextView
+        android:id="@+id/errorLbl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="96dp"
+        android:textColor="@color/negativeRed"
+        android:textAlignment="center"
+        android:textSize="20dp"
+        app:layout_constraintTop_toBottomOf="@id/enterCheckNumberLbl"
+        tools:layout_editor_absoluteX="-9dp" />
 
 
 </android.support.constraint.ConstraintLayout>
