@@ -61,9 +61,9 @@ public class Database {
     }
 
     public void deposit(int amount) {
-        TransHistory transHistory = new TransHistory(TransHistory.TransHistoryType.Deposit, -amount, getTimeStamp());
+        TransHistory transHistory = new TransHistory(TransHistory.TransHistoryType.Deposit, amount, getTimeStamp());
         transactions.add(transHistory);
-        amountOfMoney = amountOfMoney - amount;
+        amountOfMoney = amountOfMoney + amount;
     }
 
     public void transferMoney(int amount) {
