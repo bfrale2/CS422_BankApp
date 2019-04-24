@@ -1,4 +1,4 @@
-package edu.uic.group19.a422ndbank.MainApp;
+package edu.uic.group19.a422ndbank.MainApp.DepositeActivity;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -32,7 +32,7 @@ public class DepositActivity extends AppCompatActivity implements View.OnClickLi
         public void onClick(View v) {
             switch (v.getId()) {
                 case R.id.check_deposit:
-                    startActivity(new Intent(this, Depositactivity_upload.class));
+                    depositeCheck();
                     break;
 
                 case R.id.cash_deposit:
@@ -49,10 +49,14 @@ public class DepositActivity extends AppCompatActivity implements View.OnClickLi
             }
         }
 
-    public void openDailog()
-    {
+    public void openDailog() {
         dailogclass exampleDialog = new dailogclass();
         exampleDialog.show(getSupportFragmentManager(), "Information");
+    }
+
+    private void depositeCheck(){
+        Intent i = new Intent(DepositActivity.this, Depositactivity_upload.class);
+        startActivity(i);
     }
 
     private void goToHelpPage(){

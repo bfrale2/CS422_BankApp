@@ -1,4 +1,4 @@
-package edu.uic.group19.a422ndbank.MainApp;
+package edu.uic.group19.a422ndbank.MainApp.DepositeActivity;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatDialogFragment;
