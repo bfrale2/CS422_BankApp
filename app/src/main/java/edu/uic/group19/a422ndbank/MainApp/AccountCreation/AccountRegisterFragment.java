@@ -35,7 +35,6 @@ public class AccountRegisterFragment extends Fragment {
     private EditText registerPassword1;
     private EditText registerPassword2;
 
-
     //
     public AccountRegisterFragment() {
         // Required empty public constructor
@@ -77,6 +76,8 @@ public class AccountRegisterFragment extends Fragment {
         registerPassword2 = rootView.findViewById(R.id.field_registerPasswordRepeat);
 
         Button registerButton = rootView.findViewById(R.id.btn_registerAccount);
+
+
         registerButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -84,7 +85,7 @@ public class AccountRegisterFragment extends Fragment {
             }
         });
 
-        return inflater.inflate(R.layout.fragment_account_register, container, false);
+        return rootView;
     }
 
 
